@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Paytm Android Automation test Run" parallel="tests" thread-count="2">
+
+	<test name="Login on device1">
+
+		<parameter name = "nodeIP" value = "127.0.0.1"/>
+	    <parameter name = "port" value = "4723"/>
+	    <parameter name = "DeviceID" value = "1215fc20a4e53105"/>
+
+		<classes>
+
+			<class name = "com.paytm.TestLogin"/>
+
+		</classes>
+	</test>
+
+	<test name="Login on device2">
+
+		<parameter name = "nodeIP" value = "127.0.0.1"/>
+		<parameter name = "port" value = "4725"/>
+		<parameter name = "DeviceID" value = "3208df540c2471a1"/>
+
+		<classes>
+
+			<class name = "com.paytm.TestLogin"/>
+
+		</classes>
+	</test>
+	</suite>
