@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="Paytm Android Automation test Run" parallel="tests" thread-count="2">
+<suite name="Android Automation test Run" parallel="tests" thread-count="2">
 
 	<test name="Login on device1">
 
@@ -10,7 +10,7 @@
 
 		<classes>
 
-			<class name = "com.paytm.TestLogin"/>
+			<class name = "com.Tests.TestLogin"/>
 
 		</classes>
 	</test>
@@ -23,7 +23,7 @@
 
 		<classes>
 
-			<class name = "com.paytm.TestLogin"/>
+			<class name = "com.Tests.TestLogin"/>
 
 		</classes>
 	</test>

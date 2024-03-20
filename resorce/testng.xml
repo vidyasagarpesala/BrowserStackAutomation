@@ -11,7 +11,7 @@
 
     <classes>
 
-      <class name = "com.paytm.TestLogin"/>
+      <class name = "com.Tests.TestLogin"/>
 
     </classes>
   </test>

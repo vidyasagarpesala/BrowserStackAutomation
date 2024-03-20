@@ -1,4 +1,4 @@
-package com.paytm;
+package com.Tests;
 
 public class TestLogout {
 }

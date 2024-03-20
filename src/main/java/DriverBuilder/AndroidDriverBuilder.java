@@ -9,26 +9,23 @@ import java.net.URL;
 
 public class AndroidDriverBuilder {
 
-    String userName = "vidyasagar18";
-    String accessKey = "H2g4NfqrLeTzQxHBXWpD";
-    String app = "bs://09ec2da7e22a68d5f645bbb7d08c508094f1e8c5";
 
     public  AndroidDriver createAndroidDriverInstance() {
         AndroidDriver driver;
-        DesiredCapabilities Capabilities = new DesiredCapabilities();
-        Capabilities.setCapability("deviceName", "Samsung Galaxy S21");
-        Capabilities.setCapability("os_version", "12.0");
-        Capabilities.setCapability("project", "sample project");
-        Capabilities.setCapability("build", "1.0");
-        Capabilities.setCapability("name", "browserStackTest");
-        Capabilities.setCapability("app", app);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("platformName","Android");
+        capabilities.setCapability("deviceName", "pixel_7");
+        capabilities.setCapability("platformVersion", "12.0");
+        capabilities.setCapability("automationName", "UiAutomator2");
+        capabilities.setCapability("appActivity", "com.android.settings");
+        capabilities.setCapability("appPackage", "com.android.settings.Settings");
         URL url;
         try {
-            url = new URL("https://"+userName+":"+accessKey+"@hub-cloud.browserstack.com/wd/hub");
+            url = new URL("https://127.0.0.1:4723/wd/hub");
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-        driver = new AndroidDriver(url, Capabilities);
+        driver = new AndroidDriver(url, capabilities);
         return driver;
     }
 
