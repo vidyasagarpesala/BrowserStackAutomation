@@ -1,1 +1,1 @@
-# BrowserStackAutomation
+# TestAutomation
